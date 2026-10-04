@@ -7,22 +7,27 @@
     <meta name="description" content="Neo's Car Rentals">
     <title>Neo's Car Rentals</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <section class="hero">
-        <header>
-            <h1>Neo's Car Rentals</h1>
+    <header class="site-header">
+        <h1><a href="index.html">Neo's Car Rentals</a></h1>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="cars.html">Cars</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+        <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <nav id="navMenu" class="nav-links">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="cars.html"><i class="fa fa-car"></i> Cars</a>
+            <a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a>
+            <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fa fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
 
         <div class="hero-content">
             <h2>Find Your Perfect Rental Car</h2>
@@ -38,10 +43,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_1-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_1-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_1.jpg" alt="Featured rental car 1">
                     </picture>
                     <h3>Featured Car 1</h3>
@@ -49,10 +51,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_2-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_2-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_2.jpg" alt="Featured rental car 2">
                     </picture>
                     <h3>Featured Car 2</h3>
@@ -60,10 +59,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_3-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_3-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_3.jpg" alt="Featured rental car 3">
                     </picture>
                     <h3>Featured Car 3</h3>
@@ -71,10 +67,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_4-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_4-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_4.jpg" alt="Featured rental car 4">
                     </picture>
                     <h3>Featured Car 4</h3>
@@ -82,10 +75,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_5-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_5-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_5.jpg" alt="Featured rental car 5">
                     </picture>
                     <h3>Featured Car 5</h3>
@@ -93,10 +83,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_6-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_6-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_6.jpg" alt="Featured rental car 6">
                     </picture>
                     <h3>Featured Car 6</h3>
@@ -104,10 +91,7 @@
 
                 <article class="car-card">
                     <picture>
-                        <source
-                            srcset="images/car_7-480w.webp 480w"
-                            sizes="(max-width: 600px) 100vw, 350px"
-                            type="image/webp">
+                        <source srcset="images/car_7-480w.webp 480w" sizes="(max-width: 600px) 100vw, 350px" type="image/webp">
                         <img src="images/car_7.jpg" alt="Featured rental car 7">
                     </picture>
                     <h3>Featured Car 7</h3>
@@ -117,6 +101,7 @@
         </section>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
