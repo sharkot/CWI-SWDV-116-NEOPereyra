@@ -6,19 +6,24 @@
     <meta name="description" content="Neo's Car Rentals About">
     <title>Neo's Car Rentals About</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="site-header">
         <h1><a href="index.html">Neo's Car Rentals</a></h1>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cars.html">Cars</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <nav id="navMenu" class="nav-links">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="cars.html"><i class="fa fa-car"></i> Cars</a>
+            <a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a>
+            <a href="about.html"><i class="fa fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fa fa-envelope"></i> Contact</a>
         </nav>
     </header>
 
@@ -26,5 +31,6 @@
         <p>About Us</p>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
