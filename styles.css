@@ -7,8 +7,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HERO SECTION */
-
 .hero {
     min-height: 600px;
     background-image:
@@ -18,8 +16,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* Use smaller WebP hero images when the browser supports WebP */
 
 @supports (background-image: url("images/hero_1-480w.webp")) {
     .hero {
@@ -45,9 +41,7 @@ body {
     }
 }
 
-/* HEADER / NAV */
-
-header {
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,26 +49,42 @@ header {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-header h1 {
+.site-header h1 {
     margin: 0;
 }
 
-nav {
+.site-header h1 a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+
+.nav-links {
     display: flex;
     gap: 25px;
 }
 
-nav a {
+.nav-links a {
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: cadetblue;
     text-decoration: underline;
 }
 
-/* HERO CONTENT */
+.nav-links i {
+    margin-right: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+}
 
 .hero-content {
     min-height: 500px;
@@ -103,8 +113,6 @@ nav a:hover {
 .button:hover {
     background-color: rgb(70, 130, 132);
 }
-
-/* FEATURED CARS */
 
 .featured {
     padding: 50px 30px;
@@ -150,29 +158,40 @@ nav a:hover {
     padding: 10px;
 }
 
-/* Required from previous CSS lab */
-
 main p {
     font-size: 2rem;
     font-weight: bold;
+    padding: 20px 40px;
 }
 
-/* MOBILE */
-
 @media screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
+    .site-header {
+        flex-wrap: wrap;
         padding: 20px;
     }
 
-    header h1 {
-        margin-bottom: 15px;
+    .menu-toggle {
+        display: block;
     }
 
-    nav {
+    .nav-links {
+        display: none;
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        border-top: 1px solid #ddd;
     }
 
     .hero {
@@ -191,5 +210,9 @@ main p {
     .car-card {
         width: 100%;
         max-width: 400px;
+    }
+
+    main p {
+        padding: 20px;
     }
 }
