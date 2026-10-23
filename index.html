@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SWDV-116 Lab 9">
+    <meta name="description" content="SWDV-116 Lab 10">
     <title>Neo's Car Rentals</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,8 +30,26 @@
     </header>
 
         <div class="hero-content">
-            <h2>Find Your Perfect Rental Car</h2>
-            <a class="button" href="cars.html">View Cars</a>
+            <h2>Rent A Car Today</h2>
+
+            <form class="rental-form" action="cars.html" method="GET">
+                <label for="car-type">Car Type</label>
+                <select id="car-type" name="type" required>
+                    <option value="" disabled selected>Choose a car</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="truck">Truck</option>
+                    <option value="sports">Sports Car</option>
+                </select>
+
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" name="pickup" required>
+
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" name="return" required>
+
+                <button type="submit">Search</button>
+            </form>
         </div>
     </section>
 

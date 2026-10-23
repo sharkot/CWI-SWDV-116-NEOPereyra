@@ -102,6 +102,52 @@ body {
     margin-bottom: 20px;
 }
 
+/* Rental search form */
+.rental-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+}
+
+.rental-form label {
+    font-weight: bold;
+}
+
+.rental-form select,
+.rental-form input,
+.rental-form button {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border-radius: 5px;
+}
+
+.rental-form select,
+.rental-form input {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #222;
+}
+
+.rental-form button {
+    margin-top: 8px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rental-form button:hover {
+    background-color: rgb(70, 130, 132);
+}
+
 .button {
     background-color: cadetblue;
     color: white;
