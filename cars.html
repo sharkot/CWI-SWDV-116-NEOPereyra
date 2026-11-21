@@ -28,9 +28,16 @@
     </header>
 
     <main>
-        <p>Cars</p>
+        <section class="featured">
+            <h2>Available Cars</h2>
+            <div id="car-list" class="car-container"></div>
+        </section>
     </main>
 
     <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", listCars);
+    </script>
 </body>
 </html>
