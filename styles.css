@@ -262,3 +262,18 @@ main p {
         padding: 20px;
     }
 }
+
+/* Rental result cards */
+.car-card .car-type {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: cadetblue;
+    padding: 0 15px;
+}
+
+.car-card .car-description {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 0 20px 20px;
+}
