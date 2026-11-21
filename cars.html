@@ -34,10 +34,43 @@
         </section>
     </main>
 
+    <dialog id="rental-dialog" aria-labelledby="rental-title">
+        <h2 id="rental-title">Confirm Your Rental</h2>
+        <p>Car type: <span id="rental-type"></span></p>
+        <p>Start date: <span id="rental-start"></span></p>
+        <p>Return date: <span id="rental-return"></span></p>
+        <div class="dialog-actions">
+            <button type="button" id="confirm-rental" class="button">Confirm</button>
+            <button type="button" id="cancel-rental" class="button">Cancel</button>
+        </div>
+    </dialog>
+
     <script src="script.js"></script>
     <script src="main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", listCars);
+
+        const rentalDialog = document.getElementById("rental-dialog");
+        let rentalInfo = null;
+
+        document.addEventListener("confirm-rental", function (event) {
+            rentalInfo = event.detail;
+
+            document.getElementById("rental-type").textContent = rentalInfo.carType;
+            document.getElementById("rental-start").textContent = rentalInfo.startDate || "Not selected";
+            document.getElementById("rental-return").textContent = rentalInfo.returnDate || "Not selected";
+
+            rentalDialog.showModal();
+        });
+
+        document.getElementById("confirm-rental").addEventListener("click", function () {
+            rentalDialog.close();
+            console.log("Rental confirmed:", rentalInfo);
+        });
+
+        document.getElementById("cancel-rental").addEventListener("click", function () {
+            rentalDialog.close();
+        });
     </script>
 </body>
 </html>
