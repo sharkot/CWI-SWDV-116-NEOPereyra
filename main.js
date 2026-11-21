@@ -77,6 +77,7 @@ if (searchForm) {
 function displayCars(carList) {
     const container = document.getElementById("car-list");
     container.textContent = "";
+    const params = new URLSearchParams(window.location.search);
 
     if (carList.length === 0) {
         container.textContent = "No cars found for this type.";
@@ -98,9 +99,27 @@ function displayCars(carList) {
         description.className = "car-description";
         description.textContent = car.description;
 
+        const rentButton = document.createElement("button");
+        rentButton.type = "button";
+        rentButton.className = "button rent-button";
+        rentButton.textContent = "Rent This Car";
+
+        rentButton.addEventListener("click", function () {
+            const rental = {
+                carType: car.type,
+                startDate: params.get("pickup") || "",
+                returnDate: params.get("return") || ""
+            };
+
+            document.dispatchEvent(new CustomEvent("confirm-rental", {
+                detail: rental
+            }));
+        });
+
         card.appendChild(name);
         card.appendChild(type);
         card.appendChild(description);
+        card.appendChild(rentButton);
         container.appendChild(card);
     });
 }
